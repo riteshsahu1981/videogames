@@ -18,7 +18,8 @@ class GamesApi(Resource):
 		json_data=[]
 		for result in rv:
 			json_data.append(dict(zip(row_headers,result)))
-		return Response(json.dumps(json_data),  mimetype='application/json')
+			 
+		return Response(json.dumps(json_data),  mimetype='application/json', headers={'Access-Control-Allow-Origin': '*', "Access-Control-Allow-Methods":"GET, POST PUT, DELETE, OPTIONS", "Access-Control-Allow-Header":"Content-Type"})
 		return json.dumps(json_data)
 	
 	def foo(self):
