@@ -28,3 +28,7 @@ BEGIN
    
 
 END
+
+
+ALTER TABLE `features` ADD `id` BIGINT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`);
+ALTER TABLE `features` ADD `ReleaseYear` YEAR NULL AFTER `ReleaseDate`;
